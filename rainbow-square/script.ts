@@ -3,7 +3,7 @@
  * -> https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
  */
 import { create, perspective, translate } from "../lib/mat4.js";
-import { degToRad } from "../lib/rad.js";
+import { degToRad } from "../lib/math.js";
 
 interface ProgramInfo {
   program: WebGLProgram;
@@ -204,7 +204,6 @@ function drawScene(
   );
 
   gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-  console.log("drew");
 }
 
 /** Initialize a shader program, so WebGL knows how to draw our data */
